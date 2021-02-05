@@ -1,0 +1,110 @@
+.index_back{
+    text-align: center;
+}
+.index_back table{
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+    table-layout:fixed;
+}
+
+.index_back tr{
+
+}
+.title_back{
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+
+body{
+    background-color: #BABABA;
+}
+nav ul{
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+
+}
+nav ul li{
+    margin-left: 30px;
+    list-style-type: none;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #222222;
+    color: #FFFFFF;
+    margin-bottom: 2%;
+}
+.btn_hea{
+    position: absolute;
+    top: 2%;
+    left: 30%;
+}
+h1{
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+#rdv_attente{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    height: 25%;
+    width: 90%;
+}
+#rdv_encours{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 25%;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+#rdv_traite{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 25%;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+#table_centre{
+    width: 90%;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+#table_admin{
+    width: 90%;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+h4{
+    position: relative;
+    top: 8%;
+    right: 62%;
+}
+.message{
+    overflow:hidden;
+    table-layout:fixed;
+    width: 30%;
+}
