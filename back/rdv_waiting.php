@@ -43,10 +43,20 @@ $rdvlist = $sql->fetchAll();
                     <img src="https://img.icons8.com/flat_round/30/000000/expand-arrow--v1.png"/>
                 </a>
 
-                <a href="../../back/delete_rdv.php?lign_delete=<?= intval($rdv['id']) ?>">
+
+                <a type="button" class="btn" onclick="Confirmation()">
                     <img src="https://img.icons8.com/color/30/000000/delete-forever.png"/>
                 </a>
 
+                <script language='javascript'>
+                    function Confirmation()
+                    {
+                        if (confirm("Confirmez la suppression ?"))
+                        {
+                            document.location.href="../../back/delete_rdv.php?lign_delete=<?= intval($rdv['id']) ?>";
+                        }
+                    }
+                </script>
             </td>
         </tr>
     <?php endforeach; ?>

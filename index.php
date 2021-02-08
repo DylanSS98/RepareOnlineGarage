@@ -21,9 +21,11 @@ if (isset($_POST['form_submit'])) {
     $req->execute([$centre, $email, $nom, $adresse, $tel, $message]);
 
     if ($req) {
-        $succes = 'Votre compte à bien été créer !';
+        $succes = 'Envoyer avec succès !';
+        header('#maCarte');
     } else {
-        $erreur = 'Les mots de passe ne corresponde pas !';
+        $erreur = 'Echec lors de l\'envoie !';
+        header('#maCarte');
     }
 //parametre de l'envoie de message
 
@@ -60,7 +62,7 @@ if (isset($_POST['form_submit'])) {
 <header>
 
     <nav>
-        <ul class="nav justify-content-center bg-dark m-0 ">
+        <ul class="nav justify-content-center bg-secondary m-0 ">
             <li class="nav-item">
                 <a class="nav-link active" href="#nous">A propos</a>
             </li>
@@ -72,20 +74,21 @@ if (isset($_POST['form_submit'])) {
             </li>
         </ul>
     </nav>
-    <img class="logo_geek" src="img/logo_anim.gif" alt="logo geek garage">
+
 </header>
+
+<img class="logo_geek" src="img/logo_anim.gif" alt="logo geek garage">
 <div id="corps">
 
     <div id="nous" class="section">
 
-        <img class="img_nous " width="100%" height="680px" src="img/ordi_nous.jpg" alt="">
-
-        <h3 style="padding-top: 50px">A propos de nous</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos fugiat iste, magni maiores nulla
-            odit tempore veritatis? Aspernatur blanditiis fugiat quisquam reprehenderit! Ad, aperiam illum ipsam
-            laboriosam quam repudiandae.</p>
-
+    </div>
+    <div class="text_nous">
+        <h3><strong>A propos de nous</strong></h3>
+        <br>
+        <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos fugiat iste, magni maiores nulla
+                odit tempore veritatis? Aspernatur blanditiis fugiat quisquam reprehenderit! Ad, aperiam illum ipsam
+                laboriosam quam repudiandae.</strong></p>
     </div>
 
 
@@ -143,6 +146,19 @@ if (isset($_POST['form_submit'])) {
         <div id="maCarte">
 
         </div>
+        <?php
+        if (isset($erreur)) {
+            echo "<div class='alert alert-danger' role='alert'>
+  $erreur
+</div>";
+        }
+        if (isset($succes)) {
+            echo "<div class='alert alert-success' role='alert'>
+  $succes
+</div>";
+        }
+        ?>
+
 
 
         <!-- Modal -->
@@ -183,19 +199,11 @@ if (isset($_POST['form_submit'])) {
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                             <button name="form_submit" type="submit" class="btn btn-primary">Envoyer</button>
                         </div>
                         </form>
 
-                        <?php
-                        if (isset($erreur)) {
-                            echo "<p style='color: red'>$erreur<p>";
-                        }
-                        if (isset($succes)) {
-                            echo "<p style='color: green'>$succes</p>";
-                        }
-                        ?>
                     </div>
                 </div>
             </div>
@@ -203,11 +211,11 @@ if (isset($_POST['form_submit'])) {
 
 
     </div>
-    <footer>
+    <footer class="bg-secondary">
 
         <h5>Site conçus par Dylan Silva Sanches</h5>
 
-        <a style="font-size: 0.5em" href="admin/index.php">Accés admin</a>
+        <a style="font-size: 0.5em; color: aliceblue" href="admin/index.php">Accés admin</a>
     </footer>
     <!-- Js -->
     <!--<script type="text/javascript" src="js/appmap.js"></script>-->

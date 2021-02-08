@@ -59,7 +59,7 @@ if(isset($_POST['form_connect'])){
 <body>
 
 
-<div class="form_register">
+<div class="form_register card">
     <h2>Connexion</h2>
     <form method="post" action="">
 
@@ -68,9 +68,9 @@ if(isset($_POST['form_connect'])){
         <input type="password" name="mdp_connect" placeholder="Mot de passe" class="form-control" required>
         </br>
         <button class="btn btn-primary" type="submit" name="form_connect">Se connecter</button>
-
+        <a href="../" class="btn btn-info">Retourner sur le site</a>
     </form>
     <br>
-    <a href="../" class="btn btn-info">Retourner sur le site</a>
+
 </div>
 

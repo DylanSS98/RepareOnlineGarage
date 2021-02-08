@@ -32,13 +32,23 @@ $rdvlist = $sql->fetchall();
             <td><?= $rdv['datefr'] ?></td>
             <td>
 
-                <a href="../../back/update_status_.php?id_rdv=<?= intval($rdv['id']) ?>">
+                <a href="../../back/update_status_encours.php?id_rdv=<?= intval($rdv['id']) ?>">
                     <img src="https://img.icons8.com/flat_round/30/000000/collapse-arrow--v1.png"/>
                 </a>
 
-                <a class="btn" href="../../back/delete_rdv.php?lign_delete=<?= intval($rdv['id']) ?>">
+                <a type="button" class="btn" onclick="Confirmation()">
                     <img src="https://img.icons8.com/color/30/000000/delete-forever.png"/>
                 </a>
+
+                <script language='javascript'>
+                    function Confirmation()
+                    {
+                        if (confirm("Confirmez la suppression ?"))
+                        {
+                            document.location.href="../../back/delete_rdv.php?lign_delete=<?= intval($rdv['id']) ?>";
+                        }
+                    }
+                </script>
 
             </td>
         </tr>

@@ -15,7 +15,7 @@ if (isset($_SESSION['auth'])) {
 
     $req->execute();
 
-    header('Location: ../admin/dash/list_centre.php');
+    header('Location: list_centre.php');
 
 }
 else{

@@ -61,8 +61,11 @@ if (isset($_POST['form_submit'])) {
     <title>Inscription</title>
 </head>
 <body>
+<header>
+    <h1>Ajouter un administrateur</h1>
+</header>
 
-<div class="form_register">
+<div class="form_register card">
     <h2>Inscription</h2>
     <form method="post" action="" >
 

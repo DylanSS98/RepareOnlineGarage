@@ -39,26 +39,32 @@ if (isset($_SESSION['auth'])) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../css/back.css">
     <title>Edition de ville</title>
 </head>
 <body>
 
+<header>
+    <h1>Edition centre</h1>
+</header>
+
 <div>
-    <h3 style="margin-top: 100px">Modifier</h3>
+    <div id="form_edit" class="card">
+    <h3 style="padding-bottom: 10px">Modifier</h3>
+
     <form action="" method="post" class="form-group">
 
-        <input type="text" name="ville_name" placeholder="Ville" class="form-control w-50 mt-2" value="<?= $villes['Villes'] ?>">
+        <input type="text" name="ville_name" placeholder="Ville" class="form-control" value="<?= $villes['Villes'] ?>">
 
-        <input type="text" name="ville_adress" placeholder="Adresse" class="form-control w-50 mt-2" value="<?= $villes['adresse'] ?>">
+        <input type="text" name="ville_adress" placeholder="Adresse" class="form-control" value="<?= $villes['adresse'] ?>">
 
-        <input type="text" name="horaire" placeholder="horaire" class="form-control w-50 mt-2" value="<?= $villes['horaire'] ?>">
+        <input type="text" name="horaire" placeholder="horaire" class="form-control" value="<?= $villes['horaire'] ?>">
 
-        <input type="text" name="tel" placeholder="N° de téléphone" class="form-control w-50 mt-2" value="<?= $villes['tel'] ?>">
+        <input type="text" name="tel" placeholder="N° de téléphone" class="form-control" value="<?= $villes['tel'] ?>">
 
-        <input type="text" name="ville_lat" placeholder="lat" class="form-control w-50 mt-2" value="<?= $villes['lat'] ?>">
+        <input type="text" name="ville_lat" placeholder="lat" class="form-control" value="<?= $villes['lat'] ?>">
 
-        <input type="text" name="ville_lon" placeholder="lon" class="form-control w-50 mt-2" value="<?= $villes['lon'] ?>">
+        <input type="text" name="ville_lon" placeholder="lon" class="form-control" value="<?= $villes['lon'] ?>">
 
         <button name="submit_edit" type="submit" class="btn btn-primary mt-2" >Modifier</button>
 
@@ -69,10 +75,11 @@ if (isset($_SESSION['auth'])) {
             
   Enregistrer avec succés ! Redirection dans 3 secondes...
 </div>';
-            header("Refresh: 3;url=../admin/dash/list_centre.php");
+            header("Refresh: 3;url=list_centre.php");
         }
         ?>
     </form>
+    </div>
 </div>
 </body>
 </html>

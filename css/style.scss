@@ -45,8 +45,11 @@ color: #222222;
 
 /* id */
 #nous{
-  background-color: #291e17;
+  background:no-repeat url("../img/ordi_nous.jpg");
+  height: 950px;
+  opacity: 0.4;
 }
+
 #service {
     padding-top: 120px;
   padding-bottom: 380px;
@@ -55,7 +58,7 @@ color: #222222;
 #localisation{
   background-image: url("../img/fond_parquet.jpg");
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
 }
 #maCarte{
   height: 500px;
@@ -63,6 +66,9 @@ color: #222222;
   margin-left: 20%;
   border: 8px #2d2e2e solid;
 
+}
+.text_nous{
+  padding-top: 200px;
 }
 li img{
   width: 200px;
@@ -83,7 +89,7 @@ ul{
 }
 
 footer{
-  background-color: #2d2e2e;
+
   padding: 20px 10px;
 }
 footer h5{
@@ -94,10 +100,17 @@ nav {
   z-index: 10;
   width: 100%;
 }
-
+nav ul li a {
+  color: aliceblue;
+}
+.text_nous{
+  position: absolute;
+  top: 120%
+}
 @media screen and (max-width: 728px){
   .logo_geek{
     width: 90%;
+  margin-top: 100px;
   }
 
   .img_nous{
@@ -107,9 +120,13 @@ nav {
   h3{
     padding-top: 15%;
   }
+  #service h2{
+
+  }
+
 
   #maCarte{
-    height: 500px;
+    height: 300px;
 
   }
   footer h5{
@@ -121,11 +138,10 @@ nav {
  #service ul{
     display: flex;
     flex-direction: column;
-   margin: 0;
-   padding: 0;
+
   }
   h2{
-    font-size: 0.6em;
+    font-size: 1.2em;
   }
 }
 

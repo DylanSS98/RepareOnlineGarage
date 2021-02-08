@@ -7,7 +7,7 @@ if (isset($_SESSION['auth'])) {
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-require '../../back/db.php';
+require 'db.php';
 
 if (isset($_POST['form_submit'])) {
     $nom_ville = $_POST['ville_name'];
